@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import './App.css';
+import './App.scss'
+import HomePage from '../../components/homepage/homepage.js';
+
 
 
 class App extends Component {
@@ -8,7 +10,9 @@ class App extends Component {
     }
         render(){
             return (
-                <div>Test React Connection</div>
+                <div>
+                    <HomePage/>
+                </div>
             )
         }
 }
