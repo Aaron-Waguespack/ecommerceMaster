@@ -1,5 +1,8 @@
+// const HtmlWebPackPlugin = require( 'html-webpack-plugin' );
+const path = require( 'path' );
 module.exports = {
-  entry: __dirname + '/src/index.js',
+  context:__dirname,
+  entry:'./src/index.js',
   module: {
     rules: [
       {
@@ -24,6 +27,13 @@ module.exports = {
   },
   output: {
         filename: 'bundle.js',
-        path: __dirname + '/dist'
-      }
+        path: path.resolve( __dirname, 'dist' )
+  },
+  devServer: {
+        historyApiFallback: true,
+        contentBase:path.resolve( __dirname, 'dist' )
+  },
+//   plugins: [
+//     new HtmlWebPackPlugin()
+//  ]
 };
