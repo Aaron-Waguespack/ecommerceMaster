@@ -24,18 +24,16 @@ module.exports = {
           }],
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(png|jp(e*)g|svg|gif)$/,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name:'[name].[ext]',
-              outputPath: 'img/',
-              publicPath: '../',
-            }
-          }
-        ]
-      },
+              name: 'images/[hash]-[name].[ext]',
+            },
+          },
+        ],
+      }
     ]
   },
   output: {
